@@ -1,3 +1,5 @@
+Used: React Router, React Contex API, JSON placeholder, axios, bootstrap4.
+
 URL:https://Al1exhawk.github.io/ContactManager
 
 
