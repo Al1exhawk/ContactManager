@@ -1,20 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Header = props => {
-  const { appname } = props;
+  const { branding } = props;
   return (
-    <nav
-      className="navbar navbar-expand-sm navbar-dark mb-3 py-0"
-      style={{
-        backgroundColor: "#00b386"
-      }}
-    >
+    <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
       <div className="container">
-        <Link to="/" className="navbar-brand">
-          {appname}
-        </Link>
+        <a href="/" className="navbar-brand">
+          {branding}
+        </a>
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -38,10 +33,13 @@ const Header = props => {
     </nav>
   );
 };
-Header.propTypes = {
-  appname: PropTypes.string.isRequired
-};
+
 Header.defaultProps = {
-  appname: "My App"
+  branding: 'My App'
 };
+
+Header.propTypes = {
+  branding: PropTypes.string.isRequired
+};
+
 export default Header;
